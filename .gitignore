@@ -39,3 +39,10 @@
 
 # debug information files
 *.dwo
+PlatformIO/test/README
+PlatformIO/lib/README
+PlatformIO/lib/qmath/utest/CMakeLists.txt
+PlatformIO/.vscode/extensions.json
+PlatformIO/lib/qmath/CMakeLists.txt
+PlatformIO/lib/qmath/Recipes
+PlatformIO/lib/qmath/utest/test_qmath.cc
