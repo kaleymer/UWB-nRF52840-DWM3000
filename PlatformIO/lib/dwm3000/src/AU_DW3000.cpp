@@ -192,6 +192,17 @@ uint32_t DW3000_getSysStatus() {
   return sysStatus;
 }
 
+uint32_t DW3000_getSysStatus32(uint8_t raw[6]) {
+  uint8_t s[6] = {0};
+  DW3000_readData(GEN_CFG_AES_1, SYS_STATUS, 6, s);
+  if (raw) { for (int i=0;i<6;i++) raw[i] = s[i]; }
+  uint32_t lo = (uint32_t)s[0]
+              | ((uint32_t)s[1] << 8)
+              | ((uint32_t)s[2] << 16)
+              | ((uint32_t)s[3] << 24);
+  return lo;
+}
+
 void DW3000_setSysStatus(uint32_t fullData) {
   uint8_t data[4] = {0, };
   for (uint8_t i = 0; i < 4; i++) {

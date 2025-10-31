@@ -170,6 +170,7 @@ void DW3000_startRX();
 void DW3000_writeTXFCTRL(DW3000_TX_FCTRL *txfctrl);
 void DW3000_writeTXData(uint16_t len, uint8_t* data, uint16_t bufferOffset);
 uint32_t DW3000_getSysStatus();
+uint32_t DW3000_getSysStatus32(uint8_t raw[6]);
 void DW3000_setSysStatus(uint32_t data);
 uint16_t DW3000_getRXFrameLength();
 void DW3000_getRXData(uint16_t len, uint8_t* data, uint16_t bufferOffset);
